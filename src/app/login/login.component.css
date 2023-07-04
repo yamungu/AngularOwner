@@ -1,8 +1,12 @@
 html,
 body {
     height: 100%;
+    
 }
-
+ 
+body{
+    background-color: chartreuse;
+}
 body {
     display: flex;
     align-items: center;

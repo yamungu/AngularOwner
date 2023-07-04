@@ -3,24 +3,24 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 
-const url4=environment.basePath+"owner";
+const url4=environment.basePath+"api/v1/employee";
   
 @Injectable({
   providedIn: 'root'
 })
-export class OwnerService {
+export class EmployeeService {
 
   constructor(private http:HttpClient) { }
-  getOwners(){
+  getEmployee(){
     return this.http.get<any[]>(`${url4}`);
   }
-  newOwner(data:any){
+  newEmployee(data:any){
     return this.http.post(`${url4}`,data);
   }
-  updateOwner(id:any,data:any){
+  updateEmployee(id:any,data:any){
     return this.http.put(`${url4}/${id}`,data);
   }
-  deleteOwner(id:any){
+  deleteEmployee(id:any){
     return this.http.delete(`${url4}/${id}`);
   }
 }
